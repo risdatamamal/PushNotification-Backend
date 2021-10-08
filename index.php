@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <html>
     <head>
-        <title>Firebase Push Notification System on Android</title>
+        <title>Firebase Push Notification on Android</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="//www.gstatic.com/mobilesdk/160503_mobilesdk/logo/favicon.ico">
@@ -51,15 +51,11 @@
         </style>
     </head>
     <body>
-        
         <?php
-
                 if($_POST['user_id']=="hellohasan.com" && $_POST['password']=="123"){
                     $_SESSION['status'] = "logged_in";
                     echo "<script>window.location='dashboard.php'</script>";
                 }
-
-
         ?>
 
 
@@ -68,14 +64,14 @@
                 <div><img src="https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/s1600/image00.png" width="200" alt="Firebase"/></div>
                 <br/>
                 <?php if ($json != '') { ?>
-                    <label><b>Request:</b></label>
+                    <label><Strong>Request:</Strong></label>
                     <div class="json_preview">
                         <pre><?php echo json_encode($json) ?></pre>
                     </div>
                 <?php } ?>
                 <br/>
                 <?php if ($response != '') { ?>
-                    <label><b>Response:</b></label>
+                    <label><Strong>Response:</Strong></label>
                     <div class="json_preview">
                         <pre><?php echo json_encode($response) ?></pre>
                     </div>
